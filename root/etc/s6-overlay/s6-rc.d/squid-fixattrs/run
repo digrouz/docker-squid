@@ -1,7 +1,4 @@
 #!/command/with-contenv sh
 
-chown -R appuser:appuser /config
-chmod -R g+w,o-rwx /config
-
-chown -R appuser:appuser /cache
-chmod -R g+w,o-rwx /cache
+chown -R appuser:appuser /data
+chmod -R g+w,o-rwx /data

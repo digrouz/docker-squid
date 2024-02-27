@@ -21,7 +21,7 @@ RUN set -x && \
            /var/tmp/*
 
 ### Volume
-VOLUME ["/cache","/config"]
+VOLUME ["/logs","/data"]
 
 ### Expose ports
 EXPOSE 3128
