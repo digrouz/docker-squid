@@ -21,14 +21,12 @@ http://sabnzbd.org/
 
 ## Usage
     docker create --name=squid \
-        -v <path to data>:/config \
-        -v <path to cache>:/cache \
+        -v <path to data>:/data \
         -e UID=<UID default:12345> \
         -e GID=<GID default:12345> \
         -e AUTOUPGRADE=<0|1 default:0> \
         -e TZ=<timezone default:Europe/Brussels> \
         -p 3128:3128 \
-        -p 9090:9090  \
     digrouz/squid
         
 ## Environment Variables
