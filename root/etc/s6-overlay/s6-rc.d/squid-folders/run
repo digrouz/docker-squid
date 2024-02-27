@@ -1,6 +1,6 @@
 #!/command/with-contenv sh
 
-for folders in /data/cache1 /data/dump /data/logs; do
+for folder in /data/cache1 /data/dump /data/logs; do
   if [ ! -d ${folder} ];then
     echo "Folder ${folder} is missing, creating it."
     mkdir -p ${folder}
