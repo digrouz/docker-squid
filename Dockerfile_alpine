@@ -21,7 +21,7 @@ RUN set -x && \
            /var/tmp/*
 
 ### Volume
-VOLUME ["/logs","/data"]
+VOLUME ["/data"]
 
 ### Expose ports
 EXPOSE 3128
