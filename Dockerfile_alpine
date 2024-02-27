@@ -1,0 +1,27 @@
+FROM digrouz/alpine-s6:latest
+
+ARG SQUID_VERSION='6.6-r0'
+
+LABEL maintainer "DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
+
+### Environment variables
+ENV SQUID_VERSION="${SQUID_VERSION}" 
+
+# Copy config files
+COPY root/ /
+
+### Install Application
+RUN set -x && \
+    apk --no-cache upgrade && \
+    apk del --no-cache --purge \
+      build-deps  \
+    && \
+    rm -rf /tmp/* \
+           /var/cache/apk/*  \
+           /var/tmp/*
+
+### Volume
+VOLUME ["/cache","/config"]
+
+### Expose ports
+EXPOSE 3128
