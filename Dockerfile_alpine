@@ -13,8 +13,8 @@ COPY root/ /
 ### Install Application
 RUN set -x && \
     apk --no-cache upgrade && \
-    apk del --no-cache --purge \
-      build-deps  \
+    apk add --no-cache --virtual=run-deps \
+      squid=${SQUID_VERSION} \
     && \
     rm -rf /tmp/* \
            /var/cache/apk/*  \
