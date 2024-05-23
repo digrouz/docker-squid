@@ -1,6 +1,6 @@
 FROM digrouz/alpine-s6:latest
 
-ARG SQUID_VERSION='6.6-r0'
+ARG SQUID_VERSION=''
 
 LABEL maintainer "DI GREGORIO Nicolas <nicolas.digregorio@gmail.com>"
 
