@@ -11,6 +11,7 @@ ALPINE_VERSION=$(curl -SsL https://raw.githubusercontent.com/digrouz/docker-alpi
 
 NEW_VERSION=$(curl -SsL https://pkgs.alpinelinux.org/package/v${ALPINE_VERSION}/main/${PACKAGE_ARCH}/${PACKAGE_NAME} |\
               grep -i -A 3 Version |\
+              sed  -E 's|</?strong>||g' |\
               tail -1 | \
               awk '{print $1}'\
              )
